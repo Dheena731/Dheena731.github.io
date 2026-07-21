@@ -126,8 +126,8 @@ export default function Terminal() {
     ],
 
     resume: () => {
-      window.open(import.meta.env.BASE_URL + profile.resume, '_blank', 'noopener');
-      return [line('→ opening résumé PDF…', C.ok)];
+      window.open(profile.resumeHref, '_blank', 'noopener');
+      return [line('→ opening full CV on LinkedIn…', C.ok)];
     },
 
     neofetch: () => [

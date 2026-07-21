@@ -66,13 +66,13 @@ export default function Nav({ theme, onToggleTheme }) {
 
         <div className="flex items-stretch">
           <a
-            href={import.meta.env.BASE_URL + profile.resume}
+            href={profile.resumeHref}
             target="_blank"
             rel="noreferrer"
             className="label hidden items-center gap-2 border-l-[3px] px-5 transition-colors hover:brightness-95 md:flex"
             style={{ background: 'var(--yellow)', color: '#16150f' }}
           >
-            ↓ Résumé
+            Résumé ↗
           </a>
           <button
             onClick={onToggleTheme}
@@ -117,13 +117,13 @@ export default function Nav({ theme, onToggleTheme }) {
             </a>
           ))}
           <a
-            href={import.meta.env.BASE_URL + profile.resume}
+            href={profile.resumeHref}
             target="_blank"
             rel="noreferrer"
             className="label block px-5 py-3.5"
             style={{ background: 'var(--yellow)', color: '#16150f' }}
           >
-            ↓ Download Résumé
+            Résumé on LinkedIn ↗
           </a>
         </div>
       )}

@@ -27,11 +27,10 @@ const links = [
   },
   {
     label: 'Résumé',
-    value: 'Download PDF',
-    href: profile.resume,
+    value: 'Full CV on LinkedIn',
+    href: profile.resumeHref,
     accent: 'teal',
-    icon: '↓',
-    local: true,
+    icon: '≡',
   },
 ];
 
@@ -75,7 +74,7 @@ export default function Contact() {
           {links.map((l, i) => (
             <Reveal key={l.label} delay={i * 70}>
               <a
-                href={l.local ? import.meta.env.BASE_URL + l.href : l.href}
+                href={l.href}
                 target={l.href.startsWith('mailto:') ? undefined : '_blank'}
                 rel="noreferrer"
                 className="panel lift flex h-full flex-col p-5"

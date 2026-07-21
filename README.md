@@ -47,6 +47,12 @@ All copy lives in [`src/data/profile.js`](src/data/profile.js) — experience,
 projects, skills, education, publication. Edit that one file to update the site;
 no component changes needed.
 
+The résumé PDF is deliberately **not** in this repo — it carries a phone number
+that shouldn't be scrapable. Every "Résumé" affordance points at LinkedIn via
+`profile.resumeHref`. To publish a redacted copy later: drop it in `public/`,
+un-ignore `public/*.pdf`, and set `resumeHref` to
+`import.meta.env.BASE_URL + '<filename>.pdf'`.
+
 ## Deploy
 
 Pushing to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),

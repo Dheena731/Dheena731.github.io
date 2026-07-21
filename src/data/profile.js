@@ -7,7 +7,9 @@ export const profile = {
   email: 'dhinakaranthangaraj198@gmail.com',
   github: 'https://github.com/Dheena731',
   linkedin: 'https://www.linkedin.com/in/dhinakaran-thangaraj-a2a05a230/',
-  resume: 'DhinakaranThangarajCV2.pdf',
+  // The résumé PDF is deliberately not published — it carries a phone number.
+  // Until a redacted copy exists, every "Résumé" affordance points at LinkedIn.
+  resumeHref: 'https://www.linkedin.com/in/dhinakaran-thangaraj-a2a05a230/',
   rotatingTitles: [
     'AI/ML DEVELOPER',
     'GRC AUTOMATION',

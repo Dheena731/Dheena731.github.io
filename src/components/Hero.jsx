@@ -92,13 +92,13 @@ export default function Hero() {
                 $ open terminal
               </a>
               <a
-                href={import.meta.env.BASE_URL + profile.resume}
+                href={profile.resumeHref}
                 target="_blank"
                 rel="noreferrer"
                 className="panel lift label px-6 py-3.5 text-[12px]"
                 style={{ background: 'var(--yellow)', color: '#16150f' }}
               >
-                ↓ Résumé
+                Résumé ↗
               </a>
             </div>
           </Reveal>
