@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>Dhinakaran Thangaraj — AI/ML Developer</title>
+    <meta
+      name="description"
+      content="AI/ML Developer building agentic GRC and compliance automation at SQ1 Cybersecurity Solutions. LangGraph, RAG, FastAPI, and security-focused machine learning."
+    />
+    <meta name="author" content="Dhinakaran Thangaraj" />
+    <meta name="theme-color" content="#f2efe3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0c0d10" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dhinakaran Thangaraj — AI/ML Developer" />
+    <meta
+      property="og:description"
+      content="Building AI that does the unglamorous work of security compliance — evidence, controls, risk and vendor assessment."
+    />
+    <meta property="og:url" content="https://dheena731.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var saved = localStorage.getItem('dt-theme');
+          var dark = saved
+            ? saved === 'crt'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('crt');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
