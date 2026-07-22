@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Ticker from './components/Ticker';
 import Timeline from './components/Timeline';
 import Projects from './components/Projects';
+import Packages from './components/Packages';
 import SkillsBoard from './components/SkillsBoard';
 import Terminal from './components/Terminal';
 import About from './components/About';
@@ -46,6 +47,7 @@ export default function App() {
         <Ticker items={TICKER_A} />
         <Timeline />
         <Projects />
+        <Packages />
         <SkillsBoard />
         <Ticker items={TICKER_B} background="var(--orange)" color="#fff" reverse />
         <Terminal />

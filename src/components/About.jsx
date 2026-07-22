@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section id="about" className="border-b-[3px] px-5 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-6xl">
-        <SectionHead index="05" kicker="The paperwork" title="Background" accentName="yellow" />
+        <SectionHead index="06" kicker="The paperwork" title="Background" accentName="yellow" />
 
         <div className="grid gap-6 lg:grid-cols-[1.15fr_1fr]">
           {/* left: story + education */}

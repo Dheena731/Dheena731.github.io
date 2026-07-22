@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { profile, experience, projects, skillGroups, education, publication } from '../data/profile';
+import { profile, experience, projects, packages, skillGroups, education, publication } from '../data/profile';
+import { recordInstall } from '../lib/packageProgress';
 import SectionHead from './SectionHead';
 import Reveal from './Reveal';
 
@@ -54,6 +55,8 @@ export default function Terminal() {
         ['whoami', 'who you are talking to'],
         ['work', 'employment history'],
         ['projects', 'things I have built'],
+        ['packages', 'what I ship to PyPI'],
+        ['pip install <pkg>', 'actually install one (try it)'],
         ['stack', 'languages, frameworks, tools'],
         ['education', 'degrees and scores'],
         ['papers', 'published research'],
@@ -63,7 +66,7 @@ export default function Terminal() {
         ['theme', 'toggle paper / CRT'],
         ['social', 'open github or linkedin'],
         ['clear', 'wipe the screen'],
-      ].map(([c, d]) => line(`  ${c.padEnd(12)} ${d}`)),
+      ].map(([c, d]) => line(`  ${c.padEnd(20)} ${d}`)),
       line(''),
       line('Try: sudo hire me', C.hot),
     ],
@@ -101,6 +104,62 @@ export default function Terminal() {
         line(`  ${g.items.join(' · ')}`),
         line(''),
       ]),
+
+    packages: () =>
+      packages.flatMap((p) => [
+        line(`📦 ${p.name} — v${p.version}`, C.warn),
+        line(`   ${p.tagline}`),
+        line(`   ${p.install}`, C.link),
+        line(''),
+      ]),
+
+    pip: (args) => {
+      const [sub, pkgName] = args;
+      if (sub !== 'install' || !pkgName) {
+        return [
+          line('usage: pip install <package>', C.warn),
+          line(`try: pip install ${packages[0].name}`, C.dim),
+        ];
+      }
+
+      const pkg = packages.find((p) => p.name === pkgName.toLowerCase());
+      if (!pkg) {
+        return [
+          line(`ERROR: Could not find a version that satisfies the requirement ${pkgName}`, C.hot),
+          line(`available: ${packages.map((p) => p.name).join(', ')}`, C.dim),
+        ];
+      }
+
+      const script = [
+        line(`Collecting ${pkg.name}`),
+        line(`  Downloading ${pkg.name}-${pkg.version}-py3-none-any.whl`, C.dim),
+        line('Resolving dependencies... done', C.dim),
+        line(`Installing collected packages: ${pkg.name}`),
+        line(`Successfully installed ${pkg.name}-${pkg.version}`, C.ok),
+      ];
+
+      script.forEach((l, i) => {
+        setTimeout(() => {
+          setHistory((h) => [...h, l]);
+          if (i === script.length - 1) {
+            const { gained, leveledUp } = recordInstall(pkg.id);
+            setTimeout(() => {
+              setHistory((h) => [
+                ...h,
+                line(''),
+                line(
+                  `+${gained} xp${leveledUp ? ' — LEVEL UP!' : ''} · see the Packages section below`,
+                  C.warn,
+                ),
+                line(''),
+              ]);
+            }, 200);
+          }
+        }, i * 260);
+      });
+
+      return [];
+    },
 
     education: () =>
       education.flatMap((e) => [
@@ -179,8 +238,7 @@ export default function Terminal() {
     },
 
     ls: () => [
-      line('work/  projects/  stack/  education/  papers/  contact/', C.link),
-      line('resume.pdf', C.dim),
+      line('work/  projects/  packages/  stack/  education/  papers/  contact/', C.link),
     ],
 
     date: () => [line(new Date().toString())],
@@ -191,6 +249,8 @@ export default function Terminal() {
   const ALIASES = {
     experience: 'work',
     exp: 'work',
+    pkgs: 'packages',
+    pypi: 'packages',
     skills: 'stack',
     tech: 'stack',
     edu: 'education',
@@ -259,7 +319,7 @@ export default function Terminal() {
     }
   };
 
-  const QUICK = ['whoami', 'work', 'projects', 'stack', 'neofetch', 'sudo hire me'];
+  const QUICK = ['whoami', 'work', 'projects', 'pip install toolproxy', 'stack', 'sudo hire me'];
 
   return (
     <section
@@ -269,7 +329,7 @@ export default function Terminal() {
     >
       <div className="mx-auto max-w-5xl">
         <SectionHead
-          index="04"
+          index="05"
           kicker="Yes, it actually runs"
           title="Terminal"
           accentName="purple"

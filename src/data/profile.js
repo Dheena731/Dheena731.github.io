@@ -154,6 +154,51 @@ export const projects = [
   },
 ];
 
+export const packages = [
+  {
+    id: 'toolproxy',
+    name: 'toolproxy',
+    version: '0.6.0',
+    accent: 'orange',
+    tagline: 'Universal tool-calling wrapper for non-tool-native LLMs',
+    description:
+      'A provider-agnostic Python library that adds reliable function calling to any LLM — even models with no native tool support. One API, every model, sync and async: native tool calls where available, an emulated JSON protocol where not, plus auto-repair, caching, retries, loop detection and usage budgets.',
+    install: 'pip install toolproxy',
+    releases: 6,
+    pypi: 'https://pypi.org/project/toolproxy/',
+    repo: 'https://github.com/Dheena731/toolproxy',
+    keywords: ['agents', 'function-calling', 'fastapi', 'mcp', 'retry', 'streaming'],
+  },
+  {
+    id: 'mlenvdoctor',
+    name: 'mlenvdoctor',
+    version: '0.1.6',
+    accent: 'teal',
+    tagline: 'Diagnose & fix broken ML environments for LLM fine-tuning',
+    description:
+      'A CLI that inspects PyTorch, TensorFlow and JAX environments for CUDA visibility, driver mismatches and dependency drift, then exports JSON/CSV/HTML reports and generates fixes — requirements files, Conda envs, Dockerfiles — with a plan → dry-run → apply → verify workflow.',
+    install: 'pip install mlenvdoctor',
+    releases: 7,
+    pypi: 'https://pypi.org/project/mlenvdoctor/',
+    repo: 'https://github.com/Dheena731/Ml-env-doctor',
+    keywords: ['cuda', 'diagnostics', 'pytorch', 'fine-tuning'],
+  },
+  {
+    id: 'boostapi',
+    name: 'boostapi',
+    version: '0.1.1',
+    accent: 'blue',
+    tagline: 'Production FastAPI starter toolkit',
+    description:
+      'A CLI scaffolding tool that generates a production-ready FastAPI project in seconds — async SQLAlchemy with Alembic migrations, Redis caching, JWT auth with refresh tokens, rate limiting, and OpenAPI docs wired up out of the box.',
+    install: 'pip install boostapi',
+    releases: 2,
+    pypi: 'https://pypi.org/project/boostapi/',
+    repo: 'https://github.com/Dheena731/boostapi',
+    keywords: ['fastapi', 'redis', 'sqlalchemy', 'jwt'],
+  },
+];
+
 export const skillGroups = [
   {
     label: 'AI / LLM',

@@ -140,7 +140,7 @@ export default function SkillsBoard() {
     <section id="stack" className="border-b-[3px] px-5 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHead
-          index="03"
+          index="04"
           kicker={live ? 'Drag them. Throw them. They are real objects.' : 'What I build with'}
           title="The Stack"
           accentName="teal"

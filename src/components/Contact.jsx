@@ -42,7 +42,7 @@ export default function Contact() {
       style={{ background: 'var(--paper-2)' }}
     >
       <div className="mx-auto max-w-5xl">
-        <SectionHead index="06" kicker="The part that matters" title="Get in touch" accentName="red" />
+        <SectionHead index="07" kicker="The part that matters" title="Get in touch" accentName="red" />
 
         <Reveal>
           <div className="panel-lg mb-6 flex flex-col items-center gap-7 p-8 text-center md:flex-row md:p-10 md:text-left">
