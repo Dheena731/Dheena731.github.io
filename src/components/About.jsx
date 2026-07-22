@@ -23,11 +23,11 @@ export default function About() {
                     people quietly dread.
                   </p>
                   <p>
-                    At <strong>SQ1 Cybersecurity Solutions</strong> I work on{' '}
-                    <strong>Stakflo</strong>, a GRC platform. The problems are unusually concrete —
-                    can an agent read a policy, find the evidence that proves a control is met, and
-                    justify its answer well enough that a human auditor signs off? That question
-                    covers retrieval, evaluation, agent design and a lot of unglamorous plumbing.
+                    At <strong>SQ1 Cybersecurity Solutions</strong> I'm part of the team building a{' '}
+                    GRC compliance platform. The problems are unusually concrete — can an agent
+                    read a policy, find the evidence that proves a control is met, and justify its
+                    answer well enough that a human auditor signs off? That question covers
+                    retrieval, evaluation, agent design and a lot of unglamorous plumbing.
                   </p>
                   <p>
                     Before that: computer vision on a factory floor at Krishtec, fine-tuning small
@@ -102,7 +102,7 @@ export default function About() {
                 </div>
                 <ul className="space-y-3 text-[0.95rem]">
                   {[
-                    ['Building', 'AI agents for GRC auditing on Stakflo'],
+                    ['Building', 'AI agents for GRC auditing at SQ1'],
                     ['Learning', 'evaluation methods for agentic pipelines'],
                     ['Based in', profile.location],
                   ].map(([k, v]) => (

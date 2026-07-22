@@ -18,7 +18,7 @@ export const profile = {
     'SECURITY + AI',
   ],
   blurb:
-    "I build AI that does the unglamorous work of security compliance — collecting evidence, validating controls, scoring risk, and auditing vendors. Currently shipping agentic GRC features on Stakflo at SQ1 Cybersecurity Solutions.",
+    "I build AI that does the unglamorous work of security compliance — collecting evidence, validating controls, scoring risk, and auditing vendors. Currently contributing agentic GRC features to a compliance platform at SQ1 Cybersecurity Solutions.",
   stats: [
     { value: '9', label: 'months shipping GRC AI', accent: 'orange' },
     { value: '8.2', label: 'B.Tech CGPA · AI & DS', accent: 'blue' },
@@ -34,11 +34,11 @@ export const experience = [
     role: 'Graduate Engineer Trainee — AI/ML Developer',
     period: '2025 — Present',
     location: 'Futura Tech Park, Sholinganallur, Chennai',
-    product: 'Stakflo — GRC & Compliance Platform',
+    product: 'GRC & Compliance Platform',
     accent: 'orange',
     current: true,
     summary:
-      'Building the AI layer of a Governance, Risk & Compliance platform — turning manual audit work into agentic workflows.',
+      'Part of the team building the AI layer of a Governance, Risk & Compliance platform — turning manual audit work into agentic workflows.',
     points: [
       'Automated evidence collection and validation pipelines that pull, parse and verify compliance artifacts against control requirements.',
       'Built control assessment and risk assessment engines that map findings to NIST, ISO and OSA control families.',
@@ -136,15 +136,15 @@ export const projects = [
     stack: ['Python', 'LangChain', 'Streamlit', 'DuckDuckGo API'],
   },
   {
-    id: 'stakflo',
-    title: 'Stakflo GRC Agents',
+    id: 'grc-agents',
+    title: 'GRC Agents @ SQ1',
     tag: 'Production · Agentic',
     accent: 'purple',
     year: '2025—26',
     blurb:
       'Agentic auditing for a live compliance platform — evidence, controls, risk and vendors, assessed by AI.',
     detail:
-      'The work I do day to day. LangGraph agents traverse control frameworks, request and validate evidence, and produce assessment artifacts a human auditor can sign off on. Backed by PGVector and Qdrant for retrieval over policy and evidence corpora.',
+      "My day-to-day contribution to the team's compliance platform. LangGraph agents traverse control frameworks, request and validate evidence, and produce assessment artifacts a human auditor can sign off on. Backed by PGVector and Qdrant for retrieval over policy and evidence corpora.",
     metrics: [
       { k: 'frameworks', v: 'NIST · ISO' },
       { k: 'vector', v: 'PGVector' },
