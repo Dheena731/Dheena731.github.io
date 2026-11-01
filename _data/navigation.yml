@@ -1,0 +1,13 @@
+main:
+  - title: "Experience"
+    url: /experience/
+  - title: "Projects"
+    url: /portfolio/
+  - title: "Open Source"
+    url: /open-source/
+  - title: "Publications"
+    url: /publications/
+  - title: "Talks"
+    url: /talks/
+  - title: "CV"
+    url: /cv/
